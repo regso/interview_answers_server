@@ -25,8 +25,12 @@ Handler _getRoutes() {
   );
   router.get(
     '/sections/<section_id>/questions/<question_id>',
-    (Request request, String sectionId, String questionId) =>
-        'question $sectionId $questionId',
+    (Request request, String sectionId, String questionId) => jsonEncode(
+      QuestionRepository().getQuestion(
+        sectionId: int.parse(sectionId),
+        questionId: int.parse(questionId),
+      ),
+    ),
   );
   return router;
 }

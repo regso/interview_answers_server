@@ -15,4 +15,13 @@ class QuestionRepository {
         )
     ];
   }
+
+  QuestionEntity getQuestion({required int sectionId, required int questionId}) {
+    final questions = QuestionDataSource().findQuestions(sectionId: sectionId);
+    final question = questions.firstWhere((final item) => item['id'] == questionId, orElse: () => {});
+    if (question.isNotEmpty) {
+      return QuestionEntity.fromJson(question);
+    }
+    throw Exception('Not found.');
+  }
 }
