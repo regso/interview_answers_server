@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:interview_answers_server/config/env.dart';
+import 'package:interview_answers_server/features/question/data/repositories/question_repository.dart';
 import 'package:interview_answers_server/features/section/data/repositories/section_repository.dart';
 import 'package:shelf/shelf_io.dart';
 import 'package:shelf_plus/shelf_plus.dart';
@@ -18,7 +19,9 @@ Handler _getRoutes() {
   );
   router.get(
     '/sections/<section_id>/questions',
-    (Request request, String sectionId) => 'questions $sectionId',
+    (Request request, String sectionId) => jsonEncode(
+      QuestionRepository().findQuestions(sectionId: int.parse(sectionId)),
+    ),
   );
   router.get(
     '/sections/<section_id>/questions/<question_id>',
