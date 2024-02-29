@@ -8,6 +8,7 @@ class QuestionRepository {
       for (final data in questions)
         QuestionEntity(
           id: data['id'] as int,
+          subjectId: data['subjectId'] as int,
           title: data['title'] as String,
           question: data['question'] as String,
           answer: data['answer'] as String,

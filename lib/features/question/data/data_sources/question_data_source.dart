@@ -7,6 +7,7 @@ class QuestionDataSource {
     return [
       {
         'id': 1,
+        'subjectId': 1,
         'title': 'Stateless и Stateful',
         'question': 'В чем отличие Stateless и Stateful виджета?',
         'answer':
@@ -16,6 +17,7 @@ class QuestionDataSource {
       },
       {
         'id': 2,
+        'subjectId': 1,
         'title': 'InheritedWidget',
         'question': 'Что такое InheritedWidget?',
         'answer': 'InheritedWidget — это виджет, который предоставляет своим потомкам возможность взаимодействовать с данными, хранящимися в нём. Решает проблему с передачей данных через конструкторы. Может уведомлять виджетов внизу по дереву об изменениях в собственных данных, тем самым провоцируя их перерисовку. '
@@ -25,6 +27,7 @@ class QuestionDataSource {
       },
       {
         'id': 3,
+        'subjectId': 1,
         'title': 'Widget',
         'question': 'Что такое Widget?',
         'answer':
@@ -33,6 +36,7 @@ class QuestionDataSource {
       },
       {
         'id': 4,
+        'subjectId': 1,
         'title': 'Element',
         'question': 'Что такое Element?',
         'answer':
@@ -41,6 +45,7 @@ class QuestionDataSource {
       },
       {
         'id': 5,
+        'subjectId': 1,
         'title': 'RenderObject',
         'question': 'Что такое RenderObject?',
         'answer':
@@ -49,6 +54,7 @@ class QuestionDataSource {
       },
       {
         'id': 6,
+        'subjectId': 1,
         'title': 'GlobalKeys',
         'question': 'Что такое GlobalKeys?',
         'answer':
@@ -57,6 +63,7 @@ class QuestionDataSource {
       },
       {
         'id': 7,
+        'subjectId': 1,
         'title': 'CustomPaint',
         'question': 'Что такое CustomPaint?',
         'answer':
@@ -65,6 +72,7 @@ class QuestionDataSource {
       },
       {
         'id': 8,
+        'subjectId': 1,
         'title': 'Расчёт макета',
         'question': 'Как выполняется расчет макета?',
         'answer':
@@ -73,6 +81,7 @@ class QuestionDataSource {
       },
       {
         'id': 9,
+        'subjectId': 1,
         'title': 'BuildOwner',
         'question': 'Что такое BuildOwner?',
         'answer':
@@ -81,6 +90,7 @@ class QuestionDataSource {
       },
       {
         'id': 10,
+        'subjectId': 1,
         'title': 'Garbage Collector',
         'question': 'Как работает Garbage Collector?',
         'answer':

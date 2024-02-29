@@ -9,6 +9,7 @@ part of 'question_entity.dart';
 QuestionEntity _$QuestionEntityFromJson(Map<String, dynamic> json) =>
     QuestionEntity(
       id: json['id'] as int,
+      subjectId: json['subjectId'] as int,
       title: json['title'] as String,
       question: json['question'] as String,
       answer: json['answer'] as String,
@@ -18,6 +19,7 @@ QuestionEntity _$QuestionEntityFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$QuestionEntityToJson(QuestionEntity instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'subjectId': instance.subjectId,
       'title': instance.title,
       'question': instance.question,
       'answer': instance.answer,
