@@ -16,9 +16,11 @@ class QuestionRepository {
     ];
   }
 
-  QuestionEntity getQuestion({required int subjectId, required int questionId}) {
+  QuestionEntity getQuestion(
+      {required int subjectId, required int questionId}) {
     final questions = QuestionDataSource().findQuestions(subjectId: subjectId);
-    final question = questions.firstWhere((final item) => item['id'] == questionId, orElse: () => {});
+    final question = questions
+        .firstWhere((final item) => item['id'] == questionId, orElse: () => {});
     if (question.isNotEmpty) {
       return QuestionEntity.fromJson(question);
     }
