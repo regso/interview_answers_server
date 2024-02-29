@@ -28,5 +28,5 @@ Handler _getRoutes() {
       questionId: int.parse(questionId),
     ),
   );
-  return router;
+  return router.call;
 }
