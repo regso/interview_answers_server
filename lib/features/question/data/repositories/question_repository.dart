@@ -2,8 +2,8 @@ import 'package:interview_answers_server/features/question/data/data_sources/que
 import 'package:interview_answers_server/features/question/domain/entities/question_entity.dart';
 
 class QuestionRepository {
-  List<QuestionEntity> findQuestions({required int sectionId}) {
-    final questions = QuestionDataSource().findQuestions(sectionId: sectionId);
+  List<QuestionEntity> findQuestions({required int subjectId}) {
+    final questions = QuestionDataSource().findQuestions(subjectId: subjectId);
     return [
       for (final data in questions)
         QuestionEntity(
@@ -16,8 +16,8 @@ class QuestionRepository {
     ];
   }
 
-  QuestionEntity getQuestion({required int sectionId, required int questionId}) {
-    final questions = QuestionDataSource().findQuestions(sectionId: sectionId);
+  QuestionEntity getQuestion({required int subjectId, required int questionId}) {
+    final questions = QuestionDataSource().findQuestions(subjectId: subjectId);
     final question = questions.firstWhere((final item) => item['id'] == questionId, orElse: () => {});
     if (question.isNotEmpty) {
       return QuestionEntity.fromJson(question);

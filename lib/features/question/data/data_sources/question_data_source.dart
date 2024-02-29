@@ -1,6 +1,6 @@
 class QuestionDataSource {
-  List<Map<String, dynamic>> findQuestions({required int sectionId}) {
-    if (sectionId != 1) {
+  List<Map<String, dynamic>> findQuestions({required int subjectId}) {
+    if (subjectId != 1) {
       return [];
     }
 

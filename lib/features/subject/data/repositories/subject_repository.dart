@@ -1,7 +1,7 @@
-import 'package:interview_answers_server/features/section/domain/entities/section_entity.dart';
+import 'package:interview_answers_server/features/subject/domain/entities/subject_entity.dart';
 
-class SectionRepository {
-  static const dataSections = [
+class SubjectRepository {
+  static const dataSubjects = [
     {
       'id': 1,
       'title': 'Flutter',
@@ -20,10 +20,10 @@ class SectionRepository {
     },
   ];
 
-  List<SectionEntity> findSections() {
+  List<SubjectEntity> findSubjects() {
     return [
-      for (final data in dataSections)
-        SectionEntity(
+      for (final data in dataSubjects)
+        SubjectEntity(
           id: data['id'] as int,
           title: data['title'] as String,
         )
